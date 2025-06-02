@@ -1,0 +1,38 @@
+:root {
+
+    /* Colors */
+
+    --white: #FFFFFF;
+    --black: #000000;
+    --grey-300: #ACC1DE;
+    --grey-500: #5E6E85;
+    --blue-100: #E1E7FE;
+    --blue-300: #B3D3F1;
+    --blue-500: #345FF6;
+    --blue-900: #253347;
+    --gradient-1: linear-gradient(#D6FCFE, #D6E6FE);
+
+}
+
+*,*::before, *::after {
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "Inter-Milan";
+    src: url("assets/fonts/Inter-VariableFont_slnt\,wght.ttf");
+}
+
+body {
+    font-family: "Inter-Milan", "Helvetica", sans-serif;
+    margin: 0;
+    background: var(--gradient-1);
+}
+
+
+
+/* Images */
+
+    img {
+        max-width: 100%;
+    }
