@@ -10,7 +10,7 @@
     --blue-300: #B3D3F1;
     --blue-500: #345FF6;
     --blue-900: #253347;
-    --gradient-1: linear-gradient(#D6FCFE, #D6E6FE);
+    --gradient-1: linear-gradient(to right, #D6FCFE, #D6E6FE);
 
 }
 
@@ -26,9 +26,56 @@
 body {
     font-family: "Inter-Milan", "Helvetica", sans-serif;
     margin: 0;
-    background: var(--gradient-1);
+    
 }
 
+#container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+header {
+    background-image: linear-gradient(to right,#FFFFFF, #D6FCFE, #D6E6FE);
+    border-radius: 16px;
+    height: 30rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    margin-bottom: 20rem;
+    
+}
+
+#form {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 12px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    width: 90%;
+    position: absolute;
+    bottom: -16rem;
+    text-align: start;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+
+
+#bmi-means {
+    width: 90%;
+}
+
+#limitations {
+    width: 90%;
+}
 
 
 /* Images */
