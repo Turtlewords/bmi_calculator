@@ -12,21 +12,25 @@
 <body>
   <div id="container">
     <header>
-      <img src="assets/images/logo.svg">
-      <h1>Body Mass Index Calculator</h1>
-      <p id="sub-header">Better understand your weight in relation to your height using our 
-        body mass index (BM) calculator. While BMI is not the sole determinant 
-        of a healthy weight, it offers a valuable starting point to evaluate 
-          your overall health and well-being.</p>
+      <div id="header-container">
+        <img src="assets/images/logo.svg">
+        <h1>Body Mass Index Calculator</h1>
+        <p id="sub-header">Better understand your weight in relation to your height using our 
+          body mass index (BM) calculator. While BMI is not the sole determinant 
+          of a healthy weight, it offers a valuable starting point to evaluate 
+            your overall health and well-being.</p>
+      </div>
       <form id="form">
-          <caption>Enter your details below</caption>
-          <fieldset>
-            <input type="radio" name="units" id="metric">
-            <label for="metric">Metric</label>
-            <input type="radio" name="units" id="Imperial">
-            <label for="metric">Imperial</label>
+          <h2>Enter your details below</h2>
+          <fieldset id="select-unit">
+            <label for="metric">
+              <input type="radio" name="units" id="metric">
+              Metric</label>
+            <label for="metric">
+              <input type="radio" name="units" id="Imperial">
+              Imperial</label>
           </fieldset>
-          <fieldset>
+          <fieldset id="measurements">
             <label for="height">Height</label>
             <input type="number" id="height">
             <label for="weight">Weight</label>
