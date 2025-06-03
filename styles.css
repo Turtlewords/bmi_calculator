@@ -39,14 +39,14 @@ body {
 header {
     padding-top: 3rem;
     background-image: linear-gradient(to right,#FFFFFF, #D6E6FE);
-    border-radius: 16px;
-    height: 33rem;
+    border-radius: 20px;
+    height: 42rem;
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
     position: relative;
-    margin-bottom: 28rem;
+    margin-bottom: 24rem;
     
 }
 
@@ -61,7 +61,7 @@ header {
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
     width: 90%;
     position: absolute;
-    bottom: -28rem;
+    bottom: -20rem;
     text-align: start;
     display: flex;
     flex-direction: column;
@@ -132,6 +132,7 @@ input[type=radio] {
 }
 
 #output {
+    display: none;
     background-color: var(--blue-500);
     color: white;
     padding: 1rem;
@@ -155,6 +156,9 @@ input[type=radio] {
 
 #means-hero {
     margin-bottom: 6rem;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    
 }
 
 .means-card {
@@ -238,4 +242,39 @@ h1 {
 
     img {
         max-width: 100%;
+    }
+
+    #sushi {
+        background-image: url("assets/images/image-man-eating.webp");
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+
+
+    @media (min-width: 768px) {
+        #form {
+            bottom: -10rem;
+        }
+
+        header {
+            margin-bottom: 18rem;
+        }
+
+        #welcome {
+            border-bottom-right-radius: 100px;
+            border-top-right-radius: 100px;
+        }
+
+        #means-hero {
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: initial;
+            gap: 5rem;
+        }
+
+        #sushi {
+            background-size: cover;
+            background-position: -9rem 0rem;
+        }
     }
