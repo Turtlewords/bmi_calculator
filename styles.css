@@ -300,10 +300,41 @@ h1 {
             flex-direction: row;
             flex-wrap: wrap;
             justify-content: center;
+        }
+
+        .limitations-card {
+            padding: 1.75rem;
+        }
+
+       
+    }
+
+    @media (min-width: 1300px) {
+        
+        h1 {
+            font-size: 3rem;
+            font-weight: 500;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+        }
+
+        #container {
+            max-width: 1200px;
+            border: 2px solid red;
+            align-items: initial;
+        }
+
+        header {
+            width: 60%;
+            align-items: flex-start;
+            text-align: start;
             
         }
 
-        
-
-       
+        #header-container {
+            max-width: 400px;
+        }
     }
