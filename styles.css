@@ -199,13 +199,14 @@ input[type=radio] {
 #limitations-container {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 1rem;
 }
 
 .limitations-card {
     padding: 1.25rem;
     border-radius: 16px;
     box-shadow: 6px 12px 16px var(--blue-100);
+    flex: 0 1 45%;
 }
 
 .limitations-top {
@@ -295,13 +296,14 @@ h1 {
             align-items: center;
         }
 
-        /* #limitations-container {
+        #limitations-container {
+            flex-direction: row;
             flex-wrap: wrap;
+            justify-content: center;
+            
         }
 
-        #limitations-card {
-            flex-shrink: 1;
-        } */
+        
 
        
     }
