@@ -32,10 +32,16 @@
           </fieldset>
           <fieldset id="measurements">
             <label for="height">Height
-              <input type="text" id="height-metric">
+              <div class="height-container">
+                <input type="number" id="height-metric">
+              <span id="cm">cm</span>
+              </div>
             </label>
             <label for="weight">Weight
-              <input type="text" id="weight-metric">
+              <div class="weight-container">
+                <input type="number" id="weight-metric">
+                <span id="kg">kg</span>
+              </div>
             </label>
           </fieldset>
           <div id="welcome">
