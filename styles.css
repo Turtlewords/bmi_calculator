@@ -83,9 +83,9 @@ fieldset {
 
 #select-unit {
     border: none;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
     
 }
 
@@ -275,6 +275,17 @@ h1 {
             display: none;
         }
 
+        #height-metric {
+
+        }
+
+        #weight-metric {
+            
+        }
+
+
+/* Media Queries */
+
     @media (min-width: 768px) {
         #form {
             bottom: -10rem;
@@ -282,6 +293,12 @@ h1 {
 
         header {
             margin-bottom: 18rem;
+        }
+
+        #measurements {
+            display: grid; 
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
         }
 
         #welcome {
@@ -361,9 +378,9 @@ h1 {
         }
 
         #measurements {
-            flex-direction: row;
+            /* flex-direction: row;
             justify-content: flex-start;
-            gap: 1rem;
+            gap: 1rem; */
         }
 
         #curve-left {
