@@ -271,6 +271,10 @@ h1 {
         display: none;
     }
 
+    #curve-right {
+            display: none;
+        }
+
     @media (min-width: 768px) {
         #form {
             bottom: -10rem;
@@ -337,8 +341,8 @@ h1 {
         }
 
         header {
-            width: 60%;
-            height: 60vh;
+            width: 50vw;
+            height: 80vh;
             align-items: flex-start;
             text-align: start;
             margin-bottom: 3rem;
@@ -366,7 +370,7 @@ h1 {
         display: block;
         position: absolute;
         top: -6rem;
-        right: 5rem;
+        right: 6rem;
     }
 
         #means-hero {
@@ -390,11 +394,19 @@ h1 {
         #goals {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
+            width: 100%;
+            gap: 3.25rem;
+
         }
 
         .goals-card {
             flex-direction: column;
             align-items: start;
+            
+        }
+
+        #limitations {
+            width: 100%;
         }
 
 
@@ -403,7 +415,12 @@ h1 {
             max-width: 500px;
         }
 
-        /* Finish grid section */
+        #curve-right {
+            display: block;
+            position: absolute;
+            left: 40%;
+            bottom: -200px;
+        }
 
         #gender-card {
             grid-area: gender;
@@ -427,7 +444,15 @@ h1 {
 
         #limitations-container {
             display: grid;
-            grid-template-areas: "";
+            
+            width: 100%;
+            /* grid-template-rows: repeat(3, 260px); */
+            grid-template-columns: repeat(9, 1fr);
+            grid-template-areas: 
+            ". . . . . gender gender gender ."
+            ". . . age age age muscle muscle muscle "
+            ". . pregnancy pregnancy pregnancy race race race .";
+            gap: 1.5rem;
         }
 
 
