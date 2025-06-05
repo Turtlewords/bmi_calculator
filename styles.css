@@ -97,18 +97,18 @@ fieldset {
     gap: 1rem;
 }
 
-#measurements {
+.measurements {
     border: none;
     display: flex;
     flex-direction: column;
 }
 
-#measurements label {
+.measurements label {
     font-size: .8rem;
     color: var(--grey-500);
 }
 
-#measurements input {
+.measurements input {
     padding: 1rem;
     border-radius: 12px;
     font-size: 1.5rem;
@@ -133,11 +133,102 @@ input[type='number']:active, input[type='number']:hover {
     
 }
 
+.height-container, .weight-container {
+            position: relative;
+        }
+
+        #ft-container {
+            position: relative;
+        }
+
+        #in-container {
+            position: relative;
+        }
+
+        #st-container {
+            position: relative;
+        }
+
+        #lbs-container {
+            position: relative;
+        }
+
+        #ft {
+            position: absolute;
+            font-size: 1.5rem;
+            color: var(--blue-500);
+            font-weight: 600;
+            top: 33%;
+            right: 10%;
+        }
+
+        #in {
+            position: absolute;
+            font-size: 1.5rem;
+            color: var(--blue-500);
+            font-weight: 600;
+            top: 33%;
+            right: 10%;
+        }
+
+        #st {
+            position: absolute;
+            font-size: 1.5rem;
+            color: var(--blue-500);
+            font-weight: 600;
+            top: 33%;
+            right: 10%;
+        }
+
+        #lbs {
+            position: absolute;
+            font-size: 1.5rem;
+            color: var(--blue-500);
+            font-weight: 600;
+            top: 33%;
+            right: 10%;
+        }
+
+        #cm, #kg {
+            position: absolute;
+            font-size: 1.5rem;
+            color: var(--blue-500);
+            font-weight: 600;
+            top: 33%;
+            right: 10%;
+        }
+
+#metric-measurements {
+    display: none;
+}
+
+#imperial-measurements {
+    
+}
+
+#height-imperial-container {
+    display: flex;
+    align-items: flex-end;
+    gap: 1rem;
+}
+
+#weight-imperial-container {
+    display: flex;
+    align-items: flex-end;
+    gap: 1rem;
+}
+
+
+
+/* Remove arrow buttons from number inputs */
+
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
+
+
 
 #welcome {
     background-color: var(--blue-500);
@@ -290,18 +381,7 @@ h1 {
             display: none;
         }
 
-        .height-container, .weight-container {
-            position: relative;
-        }
-
-        #cm, #kg {
-            position: absolute;
-            font-size: 1.5rem;
-            color: var(--blue-500);
-            font-weight: 600;
-            top: 33%;
-            right: 10%;
-        }
+        
 
         
 /* Media Queries */
@@ -316,10 +396,14 @@ h1 {
 
         }
 
-        #measurements {
+        .measurements {
             display: grid; 
             grid-template-columns: 1fr 1fr;
             gap: 1.5rem;
+        }
+
+        #imperial-measurements {
+            display: flex;
         }
 
         #welcome {
