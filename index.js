@@ -88,6 +88,7 @@ function calculateMetricBMI(height, weight) {
         bmiResult.textContent = bmi.toFixed(2);
 
         classification.textContent = checkBMIRange(bmi);
+        range.textContent = idealWeightRange(bmi, "metric");
         
 }
 
@@ -105,4 +106,74 @@ function checkBMIRange(num) {
         case (num >= 30):
             return "obese";
     }
+}
+
+function idealWeightRange(height, unit) {
+        
+    switch (true) {
+        case (unit == "metric"):
+            switch(true) {
+            case (height < 140):
+                return "28.5kg - 34.9kg";
+                break;
+            case(height < 142):
+                return "30.8kg - 38.1kg";
+                break;
+            case(height < 145):
+                return "33.5kg - 40.8kg";
+                break;
+            case(height < 147):
+                return "35.8kg - 43.9kg";
+                break;
+            case(height < 150):
+                return "38.5kg - 46.7kg";
+                break;
+            case(height < 152):
+                return "40.8kg - 49.9kg";
+                break;
+            case(height < 155):
+                return "43.1kg - 53kg";
+                break;
+            case(height < 157):
+                return "45.8kg - 55.8kg";
+                break;
+            case(height < 160):
+                return "48.1kg - 58.9kg";
+                break;
+            case(height < 163):
+                return "50.8kg - 61.6kg";
+                break;
+            case(height < 165):
+                return "53kg - 64.8kg";
+                break;
+            case(height < 168):
+                return "55.3kg - 68kg";
+                break;
+            case(height < 170):
+                return "58kg - 70.7kg";
+                break;
+            case(height < 173):
+                return "60.3kg - 73.9kg";
+                break;
+            case(height < 175):
+                return "63kg - 76.6kg";
+                break;
+            case(height < 178):
+                return "65.3kg - 79.8kg";
+                break;
+            case(height < 180):
+                return "67.6kg - 83kg";
+                break;
+        }
+        break;
+
+        case (unit = "imperial"):
+            case(height < 140):
+                return "4st 7lbs - 5st 7lbs ";
+                break;
+            case(height < 142):
+                return "";
+                break;
+    }
+        
 }
