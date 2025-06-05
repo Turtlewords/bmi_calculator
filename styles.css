@@ -39,7 +39,7 @@ body {
 header {
     padding-top: 3rem;
     background-image: linear-gradient(to right,#FFFFFF, #D6E6FE);
-    border-radius: 20px;
+    border-bottom-right-radius: 20px;
     height: 42rem;
     text-align: center;
     display: flex;
@@ -122,6 +122,15 @@ input[type=radio] {
     border: 0px;
     width: 2em;
     height: 2em;
+}
+
+input[type='radio']:hover, input[type='number']:hover {
+    cursor: pointer;
+}
+
+input[type='number']:active, input[type='number']:hover {
+    outline: 2px solid var(--blue-500);
+    
 }
 
 input::-webkit-outer-spin-button,
@@ -357,6 +366,10 @@ h1 {
         body {
             display: flex;
             justify-content: center;
+        }
+
+        #logo {
+            margin-bottom: 2rem;
         }
 
         #container {
