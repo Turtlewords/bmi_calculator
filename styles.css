@@ -99,8 +99,7 @@ fieldset {
 
 .measurements {
     border: none;
-    display: flex;
-    flex-direction: column;
+    
 }
 
 .measurements label {
@@ -199,11 +198,14 @@ input[type='number']:active, input[type='number']:hover {
         }
 
 #metric-measurements {
-    display: none;
+    display: flex;
+    flex-direction: column;
 }
 
 #imperial-measurements {
-    
+    width: 0;
+    height: 0;
+    overflow: hidden;
 }
 
 #height-imperial-container {
@@ -485,7 +487,9 @@ h1 {
             max-width: 500px;
         }
 
-       
+       #imperial-measurements {
+            flex-direction: column;
+        }
 
         #curve-left {
         display: block;
