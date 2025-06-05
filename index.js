@@ -44,7 +44,27 @@ metricInputs.forEach((input) => {
                 count++;
             } 
             if (count == metricInputs.length) {
-                calculateMetricBMI(heightMetric.value, weightMetric.value);
+                calculateBMI(heightMetric.value, weightMetric.value, "metric");
+            }
+        }
+    })
+})
+
+imperialInputs.forEach((input) => {
+    input.addEventListener("change", () => {
+        let count = 0;
+        for (let x of imperialInputs) {
+            if (x.value != "") {
+                count++;
+            } 
+            let inches = (ftImperial.value * 12) + inImperial.value;
+            let inchesToCm = Math.floor(inches * 2.54);
+            let lbs = (stImperial.value * 14) + lbsImperial.value
+            let lbsToKg = Math.floor(lbs * 0.4535);
+            if (count == imperialInputs.length) {
+
+
+                calculateBMI(inchesToCm, lbsToKg, "imperial");
             }
         }
     })
@@ -80,15 +100,15 @@ function showMetricForm() {
     imperialMeasurements.style.overflow = "hidden";
 }
 
-function calculateMetricBMI(height, weight) {
-        let bmi = weight / Math.sqrt(height / 100)
+function calculateBMI(height, weight, unit) {
+        let bmi = weight / Math.pow(height / 100, 2)
         
         welcome.style.display = "none";
         output.style.display = "block";
         bmiResult.textContent = bmi.toFixed(2);
 
         classification.textContent = checkBMIRange(bmi);
-        range.textContent = idealWeightRange(bmi, "metric");
+        range.textContent = idealWeightRange(bmi, unit);
         
 }
 
@@ -164,6 +184,31 @@ function idealWeightRange(height, unit) {
             case(height < 180):
                 return "67.6kg - 83kg";
                 break;
+            case(height < 183):
+                return "70.3kg - 85.7kg";
+                break;
+            case(height < 185):
+                return "72.6kg - 88.9kg";
+                break;
+            case(height < 188):
+                return "75.3kg - 91.6kg";
+                break;
+            case(height < 191):
+                return "77.5kg - 94.8kg";
+                break;
+            case(height < 193):
+                return "79.8kg - 98kg";
+                break;
+            case(height < 195):
+                return "82.5kg - 100.6kg";
+                break;
+            case(height < 198):
+                return "84.8kg - 103.8kg";
+                break;
+            case(height < 201):
+                return "87.5kg - 106.5kg";
+                break;
+            
         }
         break;
 
@@ -172,7 +217,76 @@ function idealWeightRange(height, unit) {
                 return "4st 7lbs - 5st 7lbs ";
                 break;
             case(height < 142):
-                return "";
+                return "4st 12lbs - 6st";
+                break;
+            case(height < 145):
+                return "5.4st - 6st 6lbs";
+                break;
+            case(height < 147):
+                return "5st 9lbs - 6st 13lbs";
+                break;
+            case(height < 150):
+                return "6st 1lb - 7st 5lb";
+                break;
+            case(height < 152):
+                return "6st 6lbs - 7st 12lbs";
+                break;
+            case(height < 155):
+                return "6st 11lbs - 8st 5lbs";
+                break;
+            case(height < 157):
+                return "7st 3lbs - 8st 11lbs";
+                break;
+            case(height < 160):
+                return "7st 8lbs - 9st 4lbs";
+                break;
+            case(height < 163):
+                return "7st 8lbs - 9st 1lbs";
+                break;
+            case(height < 165):
+                return "8st 5lbs - 10st 3lbs";
+                break;
+            case(height < 168):
+                return "8st 10lbs - 10st 10lbs";
+                break;
+            case(height < 170):
+                return "9st 2lbs - 11st 2lbs";
+                break;
+            case(height < 173):
+                return "9st 7lbs - 11st 9lbs";
+                break;
+            case(height < 175):
+                return "9st 13lbs - 12st 1lb";
+                break;
+            case(height < 178):
+                return "10st 4lbs - 12st 8lbs";
+                break;
+            case(height < 180):
+                return "10st 9lbs - 13st 1lb";
+                break;
+            case(height < 183):
+                return "11st lb - 13st 7lbs";
+                break;
+            case(height < 185):
+                return "11st 6lbs - 14st";
+                break;
+            case(height < 188):
+                return "11st 12lbs - 14st 6lbs";
+                break;
+            case(height < 191):
+                return "12st 3lbs - 14st 13lbs";
+                break;
+            case(height < 193):
+                return "12st 8lbs - 15st 6lbs";
+                break;
+            case(height < 195):
+                return "13st - 15st 12lbs";
+                break;
+            case(height < 198):
+                return "13st 5lbs - 16st 5lbs";
+                break;
+            case(height < 201):
+                return "13st 11lbs - 16st 11lbs";
                 break;
     }
         

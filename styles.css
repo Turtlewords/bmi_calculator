@@ -406,6 +406,7 @@ h1 {
 
         #imperial-measurements {
             display: flex;
+            flex-direction: column;
         }
 
         #welcome {
@@ -487,9 +488,9 @@ h1 {
             max-width: 500px;
         }
 
-       #imperial-measurements {
+       /* #imperial-measurements {
             flex-direction: column;
-        }
+        } */
 
         #curve-left {
         display: block;
