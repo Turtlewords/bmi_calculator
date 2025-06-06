@@ -24,6 +24,7 @@ const classification = document.querySelector("#classification");
 const range = document.querySelector("#range");
 
 
+
 // Variables
 
 let isMetric = true;
@@ -44,6 +45,15 @@ metricInputs.forEach((input) => {
                 count++;
             } 
             if (count == metricInputs.length) {
+
+                if (parseInt(heightMetric.value) < 140) {
+                    alert("Please enter a height greater than 140cm");
+                    return;
+                }
+                if (parseInt(heightMetric.value) > 200) {
+                    alert("Please enter a height less than 200cm");
+                    return;
+                }
                 calculateBMI(heightMetric.value, weightMetric.value, "metric");
             }
         }
@@ -57,12 +67,28 @@ imperialInputs.forEach((input) => {
             if (x.value != "") {
                 count++;
             } 
-            let inches = (ftImperial.value * 12) + inImperial.value;
-            let inchesToCm = Math.floor(inches * 2.54);
-            let lbs = (stImperial.value * 14) + lbsImperial.value
-            let lbsToKg = Math.floor(lbs * 0.4535);
+            
+            
+            
             if (count == imperialInputs.length) {
+                let inches = (parseInt(ftImperial.value) * 12) + parseInt(inImperial.value);
+                let inchesToCm = Math.floor(inches * 2.54);
+                let lbs = (parseInt(stImperial.value) * 14) + parseInt(lbsImperial.value)
+                let lbsToKg = Math.floor(lbs * 0.4535);
 
+                console.log("Feet: " + ftImperial.value)
+                console.log("Inches: " + inches)
+                console.log("InchesToCm: " + inchesToCm);
+                console.log("lbs: " + lbs)
+                console.log("lbsToKG: " + lbsToKg)
+                if (inchesToCm < 140) {
+                    alert("Please enter a height greater than 4ft 7in");
+                    return;
+                }
+                if (inchesToCm > 200) {
+                    alert("Please enter a height less than 6ft 6in");
+                    return;
+                }
 
                 calculateBMI(inchesToCm, lbsToKg, "imperial");
             }
@@ -79,8 +105,8 @@ function showImperialForm() {
     imperialMeasurements.style.height = "initial";
     imperialMeasurements.style.width = "initial";
     imperialMeasurements.style.overflow = "";
-    // heightMetric.value = ""
-    // weightMetric.value = ""
+    heightMetric.value = ""
+    weightMetric.value = ""
     metricMeasurements.style.height = "0";
     metricMeasurements.style.height = "0";
     metricMeasurements.style.overflow = "hidden";
@@ -90,10 +116,10 @@ function showMetricForm() {
     metricMeasurements.style.height = "initial";
     metricMeasurements.style.width = "initial";
     metricMeasurements.style.overflow = "";
-    // ftImperial.value = "";
-    // inImperial.value = "";
-    // stImperial.value = "";
-    // lbsImperial.value = "";
+    ftImperial.value = "";
+    inImperial.value = "";
+    stImperial.value = "";
+    lbsImperial.value = "";
 
     imperialMeasurements.style.height = "0";
     imperialMeasurements.style.height = "0";
@@ -104,8 +130,8 @@ function calculateBMI(height, weight, unit) {
         let bmi = weight / Math.pow(height / 100, 2)
         
         welcome.style.display = "none";
-        output.style.display = "block";
-        bmiResult.textContent = bmi.toFixed(2);
+        output.style.display = "flex";
+        bmiResult.textContent = bmi.toFixed(1);
 
         classification.textContent = checkBMIRange(bmi);
         range.textContent = idealWeightRange(bmi, unit);
@@ -208,6 +234,7 @@ function idealWeightRange(height, unit) {
             case(height < 201):
                 return "87.5kg - 106.5kg";
                 break;
+            
             
         }
         break;
