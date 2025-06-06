@@ -90,6 +90,12 @@ imperialInputs.forEach((input) => {
                     alert("Please enter a height less than 6ft 6in");
                     return;
                 }
+                if (parseInt(inImperial.value) > 11 || parseInt(inImperial.value) < 0) {
+                    alert("Please enter an inches value between 0 and 11");
+                }
+                if (parseInt(lbsImperial.value) > 13 || parseInt(lbsImperial.value) < 0) {
+                    alert("Please enter a lbs value between 0 and 13");
+                }
 
                 calculateBMI(inchesToCm, lbsToKg, "imperial");
             }
