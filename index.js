@@ -134,7 +134,7 @@ function calculateBMI(height, weight, unit) {
         bmiResult.textContent = bmi.toFixed(1);
 
         classification.textContent = checkBMIRange(bmi);
-        range.textContent = idealWeightRange(bmi, unit);
+        range.textContent = idealWeightRange(height, unit);
         
 }
 
