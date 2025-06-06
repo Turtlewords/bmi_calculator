@@ -102,12 +102,12 @@ fieldset {
     
 }
 
-.measurements label {
+.measurements label, #imperial-measurements label {
     font-size: .8rem;
     color: var(--grey-500);
 }
 
-.measurements input {
+.measurements input, #imperial-measurements input {
     padding: 1rem;
     border-radius: 12px;
     font-size: 1.5rem;
@@ -210,17 +210,20 @@ input[type='number']:active, input[type='number']:hover {
     height: 0;
     overflow: hidden;
     gap: 1rem;
+    border: none;
 }
 
 #height-imperial-container {
     display: flex;
     align-items: flex-end;
+    
     gap: 1rem;
 }
 
 #weight-imperial-container {
     display: flex;
     align-items: flex-end;
+    
     gap: 1rem;
 }
 
@@ -411,11 +414,11 @@ h1 {
 
     @media (min-width: 768px) {
         #form {
-            bottom: 0;
+            bottom: -5%;
         }
 
         header {
-            margin-bottom: 8rem;
+            margin-bottom: 12rem;
 
         }
 
@@ -426,8 +429,13 @@ h1 {
         }
 
         #imperial-measurements {
-            display: flex;
             flex-direction: column;
+            
+        }
+
+        #height-imperial-container, #weight-imperial-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
         }
 
         #welcome, #output {
@@ -503,11 +511,11 @@ h1 {
         }
 
         header {
-            width: 50vw;
-            height: 80vh;
+            width: 52rem;
+            height: 36rem;
             align-items: flex-start;
             text-align: start;
-            margin-bottom: 6rem;
+            margin-bottom: 10rem;
             
         }
 
@@ -517,7 +525,7 @@ h1 {
 
         #form {
             top: -52%;
-            right: -80%;
+            right: -70%;
             height: fit-content;
             max-width: 500px;
         }
