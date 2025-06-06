@@ -1,4 +1,5 @@
 // Elements
+const inputContainer = document.querySelector("#input-container");
 
 const metricRadio = document.querySelector("#metric");
 const imperialRadio = document.querySelector("#imperial");
@@ -102,28 +103,34 @@ imperialInputs.forEach((input) => {
 // Functions
 
 function showImperialForm() {
-    imperialMeasurements.style.height = "initial";
-    imperialMeasurements.style.width = "initial";
-    imperialMeasurements.style.overflow = "";
+    imperialMeasurements.style.display = "grid";
+    // imperialMeasurements.style.height = "initial";
+    // imperialMeasurements.style.width = "initial";
+    // imperialMeasurements.style.overflow = "";
     heightMetric.value = ""
     weightMetric.value = ""
-    metricMeasurements.style.height = "0";
-    metricMeasurements.style.height = "0";
-    metricMeasurements.style.overflow = "hidden";
+    // metricMeasurements.style.height = "0";
+    // metricMeasurements.style.height = "0";
+    // metricMeasurements.style.overflow = "hidden";
+
+    metricMeasurements.style.display = "none";
 }
 
 function showMetricForm() {
-    metricMeasurements.style.height = "initial";
-    metricMeasurements.style.width = "initial";
-    metricMeasurements.style.overflow = "";
+   
+    imperialMeasurements.style.display = "none";
+    // metricMeasurements.style.height = "initial";
+    // metricMeasurements.style.width = "initial";
+    // metricMeasurements.style.overflow = "";
     ftImperial.value = "";
     inImperial.value = "";
     stImperial.value = "";
     lbsImperial.value = "";
 
-    imperialMeasurements.style.height = "0";
-    imperialMeasurements.style.height = "0";
-    imperialMeasurements.style.overflow = "hidden";
+    // imperialMeasurements.style.height = "0";
+    // imperialMeasurements.style.height = "0";
+    // imperialMeasurements.style.overflow = "hidden";
+    metricMeasurements.style.display = "grid";
 }
 
 function calculateBMI(height, weight, unit) {

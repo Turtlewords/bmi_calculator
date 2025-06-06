@@ -198,17 +198,16 @@ input[type='number']:active, input[type='number']:hover {
         }
 
 #metric-measurements {
-    display: flex;
-    flex-direction: column;
+    display: grid;
     gap: 1rem;
 }
 
 #imperial-measurements {
-    display: flex;
+    display: none;
     flex-direction: column;
-    width: 0;
+    /* width: 0;
     height: 0;
-    overflow: hidden;
+    overflow: hidden; */
     gap: 1rem;
     border: none;
 }
