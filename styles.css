@@ -350,6 +350,10 @@ h1 {
     font-weight: 600;
 }
 
+#bmi-result-info {
+            line-height: 1.4;
+        }
+
 #range {
     font-weight: 600;
 }
