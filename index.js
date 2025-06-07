@@ -143,7 +143,7 @@ function calculateBMI(height, weight, unit) {
         let bmi = weight / Math.pow(height / 100, 2)
         
         welcome.style.display = "none";
-        output.style.display = "flex";
+        output.style.display = "grid";
         bmiResult.textContent = bmi.toFixed(1);
 
         classification.textContent = checkBMIRange(bmi);

@@ -10,7 +10,7 @@
     --blue-300: #B3D3F1;
     --blue-500: #345FF6;
     --blue-900: #253347;
-    --gradient-1: linear-gradient(to right, #D6FCFE, #D6E6FE);
+    --gradient-1: linear-gradient(#D6FCFE, #D6E6FE);
 
 }
 
@@ -33,13 +33,15 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    
     gap: 2rem;
+    width: 100%;
 }
 
 header {
     padding-top: 3rem;
-    background-image: linear-gradient(to right,#FFFFFF, #D6E6FE);
-    border-bottom-right-radius: 20px;
+    background-image: linear-gradient(to right, white, var(--blue-100), var(--blue-300));
+    border-bottom-right-radius: 24px;
     height: 42rem;
     text-align: center;
     display: flex;
@@ -245,7 +247,7 @@ input::-webkit-inner-spin-button {
 #welcome {
     background-color: var(--blue-500);
     color: white;
-    padding: 1rem;
+    padding: 1.5rem;
     border-radius: 16px;
     /* height: 230px; */
 }
@@ -256,7 +258,7 @@ input::-webkit-inner-spin-button {
     color: white;
     padding: 1rem;
     border-radius: 16px;
-    flex-direction: column;
+    
     /* height: 230px; */
 }
 
@@ -308,6 +310,9 @@ input::-webkit-inner-spin-button {
     display: flex;
     flex-direction: column;
     gap: 2.5rem;
+    padding: 2rem;
+    background-image: linear-gradient(to right, white, var(--blue-100));
+    border-radius: 20px;
 }
 
 #limitations {
@@ -354,6 +359,11 @@ p {
 
 #welcome p, #output p {
     color: white;
+    
+}
+
+.small-text {
+    font-size: .9rem;
 }
 
 #form h2 {
@@ -370,6 +380,7 @@ p {
 
 #bmi-result-info {
             line-height: 1.4;
+            display: inline-block;
         }
 
 #range {
@@ -458,17 +469,19 @@ p {
         }
 
         #output {
-            flex-direction: row;
+            grid-template-columns: 1fr 1fr;
         }
 
         #output-left {
-            width: 50%;
+            
         }
 
-        #bmi-result-info {
-            width: 50%;
+        #output-right {
+            display: flex;
+            align-items: center;
         }
 
+        
         #means-hero {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -504,6 +517,10 @@ p {
             font-size: 3.5rem;
             font-weight: 600;
         }
+        
+        #limitations h2 {
+            font-size: 3rem;
+        }
 
         body {
             display: flex;
@@ -516,7 +533,7 @@ p {
 
         #container {
             
-            align-items: initial;
+           
         }
 
         main {
@@ -526,10 +543,12 @@ p {
 
         header {
             width: 55rem;
-            height: 42rem;
+            height: 45rem;
             align-items: flex-start;
             text-align: start;
-            margin-bottom: 10rem;
+            margin-bottom: 4rem;
+            margin-left: 2rem;
+            align-self: flex-start;
             
         }
 
@@ -541,7 +560,7 @@ p {
             top: -58%;
             right: -72%;
             height: fit-content;
-            max-width: 520px;
+            max-width: 530px;
         }
 
         #bmi-result {
