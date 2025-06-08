@@ -524,7 +524,7 @@ p {
     @media (min-width: 1300px) {
         
         h1 {
-            font-size: 3.5rem;
+            font-size: 3.75rem;
             font-weight: 600;
         }
         
@@ -538,7 +538,7 @@ p {
         }
 
         #logo {
-            margin: 2rem 0 5rem;
+            margin: 4rem 0 5rem;
         }
 
         #container {
@@ -552,11 +552,11 @@ p {
         }
 
         header {
-            width: 58rem;
+            width: 60rem;
             height: 45rem;
             align-items: flex-start;
             text-align: start;
-            padding: 4rem;
+            padding: 6rem;
             margin-bottom: 3rem;
             margin-left: 2rem;
             align-self: flex-start;
@@ -568,8 +568,8 @@ p {
         }
 
         #form {
-            top: -64%;
-            right: -72%;
+            top: -72%;
+            right: -74%;
             height: fit-content;
             max-width: 560px;
         }
@@ -615,6 +615,7 @@ p {
 
         #goals h3 {
             font-size: 1.5rem;
+            font-weight: 600;
         }
 
         .goals-card {
@@ -631,6 +632,7 @@ p {
 
         #limitations-hero {
             position: absolute;
+            top: -50px;
             max-width: 500px;
         }
 
@@ -638,7 +640,7 @@ p {
             display: block;
             position: absolute;
             left: 40%;
-            bottom: -200px;
+            bottom: -160px;
         }
 
         #gender-card {
