@@ -495,6 +495,7 @@ p {
         #means-hero {
             display: grid;
             grid-template-columns: 1fr 1fr;
+            gap: 5rem;
             
         }
 
@@ -538,7 +539,7 @@ p {
         }
 
         #logo {
-            margin: 4rem 0 5rem;
+            margin: 0 0 5rem;
         }
 
         #container {
@@ -581,7 +582,7 @@ p {
         #curve-left {
         display: block;
         position: absolute;
-        top: -3rem;
+        top: -5rem;
         right: 6rem;
     }
 
@@ -673,7 +674,7 @@ p {
             ". . . . . gender gender gender ."
             ". . . age age age muscle muscle muscle "
             ". . pregnancy pregnancy pregnancy race race race .";
-            gap: 1.5rem;
+            gap: 2.5rem;
         }
 
 
