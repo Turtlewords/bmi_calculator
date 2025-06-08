@@ -39,7 +39,7 @@ metricRadio.addEventListener("change", showMetricForm);
 imperialRadio.addEventListener("change", showImperialForm);
 
 metricInputs.forEach((input) => {
-    input.addEventListener("change", () => {
+    input.addEventListener("input", () => {
         let count = 0;
         for (let x of metricInputs) {
             if (x.value != "") {
@@ -62,7 +62,7 @@ metricInputs.forEach((input) => {
 })
 
 imperialInputs.forEach((input) => {
-    input.addEventListener("change", () => {
+    input.addEventListener("input", () => {
         let count = 0;
         for (let x of imperialInputs) {
             if (x.value != "") {
