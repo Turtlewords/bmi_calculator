@@ -40,7 +40,7 @@ body {
 
 header {
     padding-top: 3rem;
-    background-image: linear-gradient(to right, white, rgba(225, 231, 254, 0.6));
+    background-image: linear-gradient(to right, white, rgba(225, 231, 254, 0.4));
     border-bottom-right-radius: 24px;
     height: 42rem;
     text-align: center;
@@ -313,7 +313,7 @@ input::-webkit-inner-spin-button {
     flex-direction: column;
     gap: 2.5rem;
     padding: 2rem;
-    background-image: linear-gradient(to right, white, rgba(225, 231, 254, 0.6));
+    background-image: linear-gradient(to right, white, rgba(225, 231, 254, 0.4));
     border-radius: 20px;
 }
 
@@ -350,6 +350,14 @@ input::-webkit-inner-spin-button {
 
 h1 {
     font-size: 2.75rem;   
+}
+
+h1, h2, h3, h4 {
+    color: var(--blue-900);
+}
+
+h1, h2 {
+    letter-spacing: -2px;
 }
 
 
@@ -560,10 +568,10 @@ p {
         }
 
         #form {
-            top: -62%;
+            top: -64%;
             right: -72%;
             height: fit-content;
-            max-width: 540px;
+            max-width: 560px;
         }
 
         #bmi-result {
@@ -601,8 +609,12 @@ p {
             grid-template-columns: 1fr 1fr 1fr;
             width: 100%;
             gap: 3.25rem;
-            padding: 6rem;
+            padding: 4rem;
 
+        }
+
+        #goals h3 {
+            font-size: 1.5rem;
         }
 
         .goals-card {
