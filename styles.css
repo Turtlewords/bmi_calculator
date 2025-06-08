@@ -367,7 +367,7 @@ p {
     line-height: 1.4;
 }
 
-#welcome p, #output p {
+#welcome p, #output p, #welcome h2 {
     color: white;
     
 }
