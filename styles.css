@@ -40,7 +40,7 @@ body {
 
 header {
     padding-top: 3rem;
-    background-image: linear-gradient(to right, white, var(--blue-100), var(--blue-300));
+    background-image: linear-gradient(to right, white, rgba(225, 231, 254, 0.6));
     border-bottom-right-radius: 24px;
     height: 42rem;
     text-align: center;
@@ -305,13 +305,15 @@ input::-webkit-inner-spin-button {
     gap: 1.5rem;
 }
 
+
+
 #goals {
     width: 90%;
     display: flex;
     flex-direction: column;
     gap: 2.5rem;
     padding: 2rem;
-    background-image: linear-gradient(to right, white, var(--blue-100));
+    background-image: linear-gradient(to right, white, rgba(225, 231, 254, 0.6));
     border-radius: 20px;
 }
 
@@ -528,7 +530,7 @@ p {
         }
 
         #logo {
-            margin: 2rem 0 4rem;
+            margin: 2rem 0 5rem;
         }
 
         #container {
@@ -537,16 +539,17 @@ p {
         }
 
         main {
-            gap: 12rem;
+            gap: 6rem;
             max-width: 1200px;
         }
 
         header {
-            width: 55rem;
+            width: 58rem;
             height: 45rem;
             align-items: flex-start;
             text-align: start;
-            margin-bottom: 4rem;
+            padding: 4rem;
+            margin-bottom: 3rem;
             margin-left: 2rem;
             align-self: flex-start;
             
@@ -557,10 +560,10 @@ p {
         }
 
         #form {
-            top: -58%;
+            top: -62%;
             right: -72%;
             height: fit-content;
-            max-width: 530px;
+            max-width: 540px;
         }
 
         #bmi-result {
@@ -598,6 +601,7 @@ p {
             grid-template-columns: 1fr 1fr 1fr;
             width: 100%;
             gap: 3.25rem;
+            padding: 6rem;
 
         }
 
